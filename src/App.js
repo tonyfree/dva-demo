@@ -4,20 +4,27 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import {Login} from './pages'
+import {Login, User} from './pages'
+import { Layout } from 'antd'
 import './App.css';
+
+const {Header, Content, Footer } = Layout
 
 const App = () => (
   <Router>
-    <div>
-      <ul>
-        <li><Link to="/login">Login</Link></li>
-      </ul>
-
-      <hr/>
-
-      <Route exact path="/login" component={Login}/>
-    </div>
+    <Layout>
+      <Header>
+        <ul>
+          <li><Link to="/login">Login</Link></li>
+          <li><Link to="/user">User</Link></li>
+        </ul>
+      </Header>
+      <Content>
+        <Route exact path="/login" component={Login}/>
+        <Route exact path="/user" component={User}/>
+      </Content>
+      <Footer>Footer</Footer>
+    </Layout>
   </Router>
 )
 
