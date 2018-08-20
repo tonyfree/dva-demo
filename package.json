@@ -17,6 +17,8 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "babel-plugin-import": "^1.8.0"
+    "babel-plugin-import": "^1.8.0",
+    "enzyme": "^3.4.4",
+    "enzyme-adapter-react-16": "^1.2.0"
   }
 }

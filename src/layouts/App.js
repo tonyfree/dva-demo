@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
-import {Login, User} from './pages'
+import {Login, User} from '../pages'
 import { Layout } from 'antd'
 import './App.css';
 
