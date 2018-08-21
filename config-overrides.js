@@ -1,9 +1,10 @@
 const path = require('path')
 const resolve = path.resolve
 const { injectBabelPlugin } = require('react-app-rewired')
+const rewireLess = require('react-app-rewire-less')
 
 module.exports = function override(config, env) {
-  //do stuff with the webpack config...
+  //路径别名
   config.resolve = {
     alias: {
       '@themes': resolve(__dirname, './src/themes'),
@@ -17,10 +18,17 @@ module.exports = function override(config, env) {
     }
   }
 
+  // antd按需加载
   config = injectBabelPlugin(
-    ['import', { libraryName: 'antd', libraryDirectory: 'es', style: 'css' }],
+    ['import', { libraryName: 'antd', libraryDirectory: 'es', style: true }],
     config,
   )
+
+  // antd主题配置
+  config = rewireLess.withLoaderOptions({
+    modifyVars: { "@primary-color": "#1DA57A" },
+    javascriptEnabled: true,
+  })(config, env)
 
   return config;
 }
