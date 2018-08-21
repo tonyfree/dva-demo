@@ -1,14 +1,12 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
-import {Login, User} from '../pages'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Login, User } from '@/pages'
+import { MyLayout } from '@components'
 import { Layout, Button } from 'antd'
-import './App.css';
+import './app.less';
 
-const {Header, Content, Footer, Sider } = Layout
+const { Content, Footer, Sider } = Layout
+const { Header } = MyLayout
 
 const App = () => (
   <Router>
