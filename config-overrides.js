@@ -2,6 +2,7 @@ const path = require('path')
 const resolve = path.resolve
 const { injectBabelPlugin } = require('react-app-rewired')
 const rewireLess = require('react-app-rewire-less')
+const theme = require('./theme.config.js')
 
 module.exports = function override(config, env) {
   //路径别名
@@ -28,7 +29,8 @@ module.exports = function override(config, env) {
 
   // antd主题配置
   config = rewireLess.withLoaderOptions({
-    modifyVars: { "@primary-color": "#1DA57A" },
+    // modifyVars: { "@primary-color": "#1DA57A" },
+    modifyVars: theme(),
     javascriptEnabled: true,
   })(config, env)
 
