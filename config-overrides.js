@@ -1,6 +1,6 @@
-// import { resolve } from 'path'
 const path = require('path')
 const resolve = path.resolve
+const { injectBabelPlugin } = require('react-app-rewired')
 
 module.exports = function override(config, env) {
   //do stuff with the webpack config...
@@ -15,6 +15,12 @@ module.exports = function override(config, env) {
       '@models': resolve(__dirname,"./src/models"),
       '@routes': resolve(__dirname,"./src/routes"),
     }
-  } 
+  }
+
+  config = injectBabelPlugin(
+    ['import', { libraryName: 'antd', libraryDirectory: 'es', style: 'css' }],
+    config,
+  )
+
   return config;
 }
