@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { Login, User } from '@/pages'
-import { MyLayout } from '@components'
+import { Login, User } from '~pages'
+import { MyLayout } from '~components'
 import { Layout, Button } from 'antd'
 import './app.less';
 

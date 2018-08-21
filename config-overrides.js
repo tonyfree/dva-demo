@@ -7,17 +7,16 @@ module.exports = function override(config, env) {
   //路径别名
   config.resolve = {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@themes': resolve(__dirname, './src/themes'),
-      '@components': resolve(__dirname,"./src/components"),
-      '@pages': resolve(__dirname,"./src/pages"),
-      '@layouts': resolve(__dirname,"./src/layouts"),
-      '@utils': resolve(__dirname,"./src/utils"),
-      '@config': resolve(__dirname,"./src/utils/config"),
-      '@enums': resolve(__dirname,"./src/utils/enums"),
-      '@services': resolve(__dirname,"./src/services"),
-      '@models': resolve(__dirname,"./src/models"),
-      '@routes': resolve(__dirname,"./src/routes"),
+      '~themes': resolve(__dirname, './src/themes'),
+      '~components': resolve(__dirname,"./src/components"),
+      '~pages': resolve(__dirname,"./src/pages"),
+      '~layouts': resolve(__dirname,"./src/layouts"),
+      '~utils': resolve(__dirname,"./src/utils"),
+      '~config': resolve(__dirname,"./src/utils/config"),
+      '~enums': resolve(__dirname,"./src/utils/enums"),
+      '~services': resolve(__dirname,"./src/services"),
+      '~models': resolve(__dirname,"./src/models"),
+      '~routes': resolve(__dirname,"./src/routes"),
     }
   }
 

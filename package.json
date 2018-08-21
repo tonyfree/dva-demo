@@ -22,5 +22,19 @@
     "enzyme-adapter-react-16": "^1.2.0",
     "react-app-rewire-less": "^2.1.2",
     "react-app-rewired": "^1.5.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "~themes": "<rootDir>/src/themes",
+      "~components": "<rootDir>/src/components",
+      "~pages": "<rootDir>/src/pages",
+      "~layouts": "<rootDir>/src/layouts",
+      "~utils": "<rootDir>/src/utils",
+      "~config": "<rootDir>/src/utils/config",
+      "~enums": "<rootDir>/src/utils/enums",
+      "~services": "<rootDir>/src/services",
+      "~models": "<rootDir>/src/models",
+      "~routes": "<rootDir>/src/routes"
+    }
   }
 }
