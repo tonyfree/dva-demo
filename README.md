@@ -26,6 +26,7 @@ create-react-app + dva
 + dva
 + rap2
 + antd
++ babel
 + webpack
 + jest
 + enzyme

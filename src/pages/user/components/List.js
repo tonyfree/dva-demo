@@ -1,9 +1,10 @@
 import React from 'react'
 import { Table } from 'antd'
 import styles from './List.less'
+import { connect } from 'react-redux'
 
 
-const List = (props) => {
+const List = ({dispatch, users}) => {
 
   const columns = [
     {
@@ -56,14 +57,14 @@ const List = (props) => {
       width: 100,
       render: (text, record) => {
         // return <DropOption onMenuClick={e => handleMenuClick(record, e)} menuOptions={[{ key: '1', name: 'Update' }, { key: '2', name: 'Delete' }]} />
-        return <button onClick={e => props.deleteHandler(record, e)}>Delete</button>
+        return <button onClick={e => dispatch({type:'DELETE_USER', id: record.id})}>Delete</button>
       },
     },
   ]
 
   return (
-    <Table columns={columns} dataSource={props.data} />
+    <Table columns={columns} dataSource={users} />
   )
 }
 
-export default List
+export default connect(({users}) => ({users}))(List)
