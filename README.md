@@ -3,6 +3,8 @@ create-react-app + dva
 
 #### 创建项目
 
+#### ESLint
+
 #### 修改项目目录
 
 #### 使用dva 
@@ -23,6 +25,7 @@ create-react-app + dva
 + react-router
 + redux
 + redux-saga
++ umi
 + dva
 + rap2
 + antd

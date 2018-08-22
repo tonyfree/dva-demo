@@ -1,10 +1,11 @@
 import React from 'react'
 import { Table } from 'antd'
 import styles from './List.less'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
+import { connect } from 'dva'
 
 
-const List = ({dispatch, users}) => {
+const List = ({dispatch, list}) => {
 
   const columns = [
     {
@@ -57,14 +58,14 @@ const List = ({dispatch, users}) => {
       width: 100,
       render: (text, record) => {
         // return <DropOption onMenuClick={e => handleMenuClick(record, e)} menuOptions={[{ key: '1', name: 'Update' }, { key: '2', name: 'Delete' }]} />
-        return <button onClick={e => dispatch({type:'DELETE_USER', id: record.id})}>Delete</button>
+        return <button onClick={e => dispatch({type:'users/remove', id: record.id})}>Delete</button>
       },
     },
   ]
 
   return (
-    <Table columns={columns} dataSource={users} />
+    <Table columns={columns} dataSource={list} />
   )
 }
 
-export default connect(({users}) => ({users}))(List)
+export default connect(({users}) => ({list:users.list}))(List)

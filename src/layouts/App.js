@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { Router, Route } from 'dva/router'
 import { Login, User } from '~pages'
 import { MyLayout } from '~components'
 import { Layout, Button } from 'antd'
@@ -8,8 +9,8 @@ import './app.less';
 const { Content, Footer, Sider } = Layout
 const { Header } = MyLayout
 
-const App = () => (
-  <Router>
+const App = ({history}) => (
+  <Router history={history}>
     <Layout>
       <Sider>
         Sider
