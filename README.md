@@ -13,4 +13,17 @@ create-react-app + dva
 
 #### 测试
 
+#### 浏览器插件
+
 #### 参考资料
++ react
++ react-router
++ redux
++ redux-saga
++ dva
++ rap2
++ antd
++ webpack
++ jest
++ enzyme
++ www.chromefor.com
