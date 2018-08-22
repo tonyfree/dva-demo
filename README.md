@@ -15,7 +15,10 @@ create-react-app + dva
 
 #### 浏览器插件
 
+#### 联调打包
+
 #### 参考资料
++ create-react-app
 + react
 + react-router
 + redux

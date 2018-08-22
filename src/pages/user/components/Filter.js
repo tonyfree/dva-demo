@@ -1,16 +1,30 @@
 import React from 'react'
-import { Input, Button } from 'antd'
+import { Button } from 'antd'
 
-const Search = Input.Search
+class Filter extends React.Component {
 
-const Filter = (props) => {
-  return (
-    <Search
-      placeholder="input search text"
-      onSearch={value => props.searchHandler(value)}
-      style={{ width: 200 }}
-    />
-  )
+  constructor (props) {
+    super(props)
+    this.clickHandler = this.clickHandler.bind(this)
+  }
+
+  clickHandler () {
+   this.props.searchHandler(this.textInput)
+  }
+
+  render () {
+    return (
+      <p>
+        <input
+          placeholder="input search text"
+          value={this.props.name}
+          ref={(input) => { this.textInput = input }}
+          style={{ width: 200 }}
+        />
+        <Button type="primary" onClick={this.clickHandler}>查询</Button>
+      </p>
+    )
+  }
 }
 
 export default Filter

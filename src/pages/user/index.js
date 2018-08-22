@@ -26,18 +26,17 @@ class User extends React.Component {
     })
   }
 
-  searchHandler = (value, e) => {
-    console.log(e)
+  searchHandler = (e) => {
     this.setState((prevState) => ({
       ...prevState,
-      name: value
+      name: e.value
     }))
-    this.getUsers({name: value}, () => {
-      console.log(this)
-      // this.setState((prevState) => ({
-      //   ...prevState,
-      //   name: ''
-      // }))
+    this.getUsers({name: e.value}, () => {
+      e.value = ''
+      this.setState((prevState) => ({
+        ...prevState,
+        name: ''
+      }))
     })
   }
 
