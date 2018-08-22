@@ -1,9 +1,6 @@
 ### 基于create-react-app集成dva
-create-react-app + dva 
 
 #### 创建项目
-
-#### ESLint
 
 #### 修改项目目录
 
@@ -15,9 +12,19 @@ create-react-app + dva
 
 #### 测试
 
+#### 联调打包
+
+#### ESLint
+
 #### 浏览器插件
 
-#### 联调打包
+#### 在编辑器中调试
++ vscode
++ WebStorm
+
+
+#### 浏览器兼容
++ IE9
 
 #### 参考资料
 + create-react-app
