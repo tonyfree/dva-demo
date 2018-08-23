@@ -14,17 +14,22 @@
 
 #### 联调打包
 
-#### ESLint
-
 #### 浏览器插件
 
 #### 在编辑器中调试
 + vscode
 + WebStorm
 
+#### 自动格式化代码
++ ESLint
++ Automatically
 
 #### 浏览器兼容
 + IE9
+
+#### SEO
++ 服务器端渲染
++ react-helmet
 
 #### 参考资料
 + create-react-app
