@@ -22,7 +22,7 @@ yarn create react-app my-app
 ```
 my-app
 ├── README.md                     // 说明文档
-├── node_modules                  // node模块
+├── node_modules                  // 依赖模块
 ├── package.json                  // 项目信息
 ├── .gitignore                    // git忽略配置
 ├── public                        // 静态资源，不会被webpack处理，直接拷贝到build文件夹下
@@ -31,7 +31,7 @@ my-app
 │   └── manifest.json             // PWA扩展配置
 └── src                           // 开发源码，webpack只编译此目录下的代码
     ├── App.css            
-    ├── App.js                    // 一个React组件
+    ├── App.js                    // React根组件
     ├── App.test.js               // 组件测试
     ├── index.css
     ├── index.js                  // 入口js
@@ -40,22 +40,25 @@ my-app
 ```
 调整后项目目录结构
 ```
-.
-├── build/                          // 默认的 build 输出目录
-├── public/
-    ├── config.js                  // umi 配置，同 .umirc.js，二选一
-└── src/                           // 源码目录，可选
-    ├── layouts/index.js           // 全局布局
-    ├── pages/                     // 页面目录，里面的文件即路由
-        ├── document.ejs           // HTML 模板
-        ├── 404.js                 // 404 页面
-        ├── page1.js               // 页面 1，任意命名，导出 react 组件
-        ├── page1.test.js          // 用例文件，umi test 会匹配所有 .test.js 和 .e2e.js 结尾的文件
-        └── page2.js               // 页面 2，任意命名
-    ├── global.css                 // 约定的全局样式文件，自动引入，也可以用 global.less
-    ├── global.js                  // 可以在这里加入 polyfill
-├── .env                           // 环境变量
-└── package.json
+my-app
+├── README.md                     
+├── node_modules                  
+├── package.json                  
+├── .gitignore                    
+├── public                                 
+└── src                          
+    ├── layouts                    // umi约定src/layouts/index.js为全局路由，我们略做调整
+    |     ├── App.css                    
+    |     ├── App.js               // 全局布局
+    |     ├── App.test.js  
+    |     └── logo.svg  
+    ├── pages                     // umi约定pages为路由目录
+    |     ├── dashboard           // 路由页面    
+    |     ├── login               // 路由页面
+    |     └── user                // 路由页面
+    ├── index.css
+    ├── index.js                  
+    └── registerServiceWorker.js 
 ```
 
 #### 使用dva 
