@@ -22,6 +22,7 @@
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
+    "analyze": "source-map-explorer build/static/js/main.*",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook -s public"
   },
@@ -40,7 +41,8 @@
     "lint-staged": "^7.2.2",
     "prettier": "^1.14.2",
     "react-app-rewire-less": "^2.1.2",
-    "react-app-rewired": "^1.5.2"
+    "react-app-rewired": "^1.5.2",
+    "source-map-explorer": "^1.6.0"
   },
   "jest": {
     "moduleNameMapper": {
