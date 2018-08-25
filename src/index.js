@@ -8,6 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 const app = dva();
 
 app.model(require('~pages/user/models/users').default);
+app.model(require('~pages/dashboard/model').default);
 
 app.router(({ history }) => App({ history }));
 
