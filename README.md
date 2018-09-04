@@ -1,3 +1,5 @@
+此方案已废弃，请移步[dva-template](https://github.com/tonyfree/dva-template)
+
 ### 基于create-react-app集成dva
 
 #### 前提说明
